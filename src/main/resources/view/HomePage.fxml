@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="150.0" minWidth="150.0" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.HomePageController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="newfilemenu" mnemonicParsing="false" onAction="#startnewfile" text="New File" />
+                        <MenuItem fx:id="openfilemenu" mnemonicParsing="false" onAction="#openfile" text="Open File" />
+                        <MenuItem fx:id="savemenu" mnemonicParsing="false" onAction="#savefiletotext" text="Save" />
+                        <MenuItem fx:id="closemenu" mnemonicParsing="false" onAction="#closethewindow" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <CheckMenuItem fx:id="txtwrapmenu" mnemonicParsing="false" onAction="#toggletextwrap" selected="true" text="Wrap Text" />
+                        <Menu mnemonicParsing="false" text="Font">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#setfonttodefault" text="Defult" />
+                                <MenuItem mnemonicParsing="false" onAction="#setfonttoarial" text="Arial" />
+                                <MenuItem mnemonicParsing="false" onAction="#setfonttotimesnewroman" text="Times New Roman" />
+                                <MenuItem mnemonicParsing="false" onAction="#setfonttocouriernew" text="Courier New" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Font Size">
+                            <items>
+                                <MenuItem fx:id="incfontsizemenu" mnemonicParsing="false" onAction="#increasefontsize" text="Increase Font Size" />
+                                <MenuItem fx:id="decfontsizemenu" mnemonicParsing="false" onAction="#decreasefontsize" text="Decrease Font Size" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Text Direction">
+                            <items>
+                                <MenuItem fx:id="ltortextdirection" mnemonicParsing="false" onAction="#setdirectionlefttoright" text="Left to Right" />
+                                <MenuItem fx:id="rtoltextdirection" mnemonicParsing="false" onAction="#setdirectionrighttoleft" text="Right to Left" />
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="aboutmenu" mnemonicParsing="false" onAction="#showaboutusinfo" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TextArea fx:id="textarea" minHeight="150.0" minWidth="150.0" prefHeight="150.0" prefWidth="150.0" wrapText="true" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
